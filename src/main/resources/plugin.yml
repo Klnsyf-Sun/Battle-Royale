@@ -1,0 +1,123 @@
+# From Spigot Wiki, Plugin.yml: https://www.spigotmc.org/wiki/plugin-yml/index.html
+# Last Modified: Apr 26, 2019 at 1:35 AM
+
+# ================================ Required Attributes ================================
+
+#This attribute points to the class of your plugin that extends JavaPlugin.
+# This must contain the full namespace including the class file itself.
+main: com.klnsyfsun.battleroyale.BattleRoyale
+
+# This attribute is the name of your plugin.
+# Must consist of all alphanumeric characters and underscores (a-z,A-Z,0-9, _)
+# Used to determine the name of the plugin's data folder.
+# It is good practice to name your jar the same as this (eg: MyPlugin.jar)
+name: battleroyale
+
+# The version of your plugin.
+# The most common format for a version string is MajorRelease.MinorRelease.Build (eg: 1.4.1)
+version: 1.0.0-SNAPSHOT
+
+
+# ================================ Optional Attributes ================================
+
+# A human friendly description of the functionality your plugin provides.
+# The description can have multiple lines.
+#description:
+
+# The version of the API you want to use.
+# 1.13 and 1.14 are available versions
+# This will signal to the server that your plugin has been coded with a specific server version in mind, and that it should not apply any sort of backwards compatibility measures. As a result you will also need to make sure that you have programmed your code to account for reading of older configurations, data, etc... .Each server version can decide how compatibility is achieved, unknown or future versions will prevent the plugin from enabling. As of the 1.14 release, the api-version 1.13 is still allowed - however future versions may drop backwards support based on this version.
+#api-version:
+
+# Explicitly state when a plugin should be loaded. If not supplied will default to POSTWORLD.
+# Has two possible values: STARTUP and POSTWORLD.
+load: POSTWORLD
+
+# Uniquely identifies who developed this plugin.
+# Used in some server error messages to provide helpful feedback on who to contact when an error occurs.
+# A SpigotMC.org forum handle or email address is recommended.
+author: Klnsyf-Sun
+
+# Allows you to list multiple authors, if it is a collaborative project. See author.
+# Must be in valid YAML list format.
+#authors:
+#  - Klnsyf-Sun
+
+# The plugin's or author's website.
+# If you have no dedicated website, a link to the page where this plugin is listed is recommended.
+website: https://github.com/Klnsyf-Sun/Battle-Royale
+
+# A list of plugins that your plugin requires to load.
+# Must be in valid YAML list format.
+# Use the name attribute of the required plugin in order to specify the dependency.
+# If any plugin listed here is not found your plugin will fail to load.
+# If multiple plugins list each other as a depend, so that there are no plugins without an unloadable dependency, all will fail to load.
+#depend:
+#  -
+
+# The name to use when logging to console instead of the plugin's name.
+prefix: Battle Royale
+
+# A list of plugins that are required for your plugin to have full functionality.
+# The value must be in YAML list format.
+# Use the name attribute of the required plugin in order to specify the dependency.
+# Your plugin will load after any plugins listed here.
+# Circular soft dependencies are loaded arbitrarily.
+#softdepend:
+#  -
+
+# A list of plugins that should be loaded after your plugin.
+# The value must in valid YAML list format.
+# Treated as if the listed plugin soft depends on this plugin.
+# Use the name attribute of the desired plugin in order to specify the target.
+# Your plugin will load before any plugins listed here.
+# Circular soft dependencies are loaded arbitrarily.
+#loadbefore:
+#  -
+
+# The name of a command the plugin wishes to register, as well as an optional list of command attributes.
+# The command name should not contain the leading '/' required to issue a command.
+commands:
+  # A command block starts with the command's name, and then has a list of optional attributes.
+  #example:
+    # A short description of what the command does.
+    # Can be used in conjunction with /help
+    #description:
+    # Alternate command names a user may use instead.
+    # You can specify any of none, one, or many aliases.
+    # If you specify more than one alias, they must be in valid YAML list format.
+    #aliases:
+    #  -
+    # The most basic permission node required to use the command.
+    # This permission node can be used to determine if a user should be able to see this command.
+    #permission:
+    # A no-permission message which is displayed to a user if they do not have the required permission to use this command.
+    # You may use empty quotes to indicate nothing should be displayed.
+    #permission-message:
+    # A short description of how to use this command.
+    # Displayed to whoever issued the command when the plugin's command handler (onCommand typically) does not return true.
+    # <command> is a macro that is replaced with the command issued wherever it occurs.
+    # To use the string "Usage:" (i.e. usage: Usage: /test command), surround the text after the usage label with double-quotes. (eg: usage: "Usage: /test command")
+    #usage:
+
+# Permission that the plugin wishes to register. Each node represents a permission to register.
+# Each permission can have multiple attributes.
+# Permission registration is optional, can also be done from code.
+# Permission registration allows you to set descriptions, defaults, and child-parent relationships.
+# Permission names should be kept in the style of <pluginname>.[category].[category].<permission>
+permissions:
+  battleroyale.*:
+    # A short description of what this permission allows.
+    # Allows programmatic access, and helps server administrators.
+    #description:
+    # Sets the default value of the permission.
+    # If nodes does not exist, permission defaults to op.
+    # Allowed defaults are: true, false, op, not op
+    #default:
+    # Allows you to set children for the permission. Child nodes are permission names.
+    # Each child node must be set to either true or false.
+    # A child node of true inherits the parent permission.
+    # A child node of false inherits the inverse parent permission.
+    # Can also contain other permission nodes.
+    #children:
+    #
